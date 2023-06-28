@@ -1,4 +1,4 @@
-package com.victoryapps.composetest.ui.home.view
+package com.victoryapps.composetest.ui.home.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -24,8 +24,8 @@ import androidx.tv.material3.Card
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.victoryapps.composetest.data.GenreEnum
-import com.victoryapps.composetest.data.Movie
+import com.victoryapps.composetest.data.model.GenreTypes
+import com.victoryapps.composetest.data.model.Movie
 import com.victoryapps.composetest.extension.getDrawableIdByName
 
 @OptIn(ExperimentalTvMaterial3Api::class)
@@ -76,7 +76,7 @@ fun MovieCardPreview() {
             "Movie description",
             Movie.Companion.url,
 
-            GenreEnum.Action.drawable,
+            GenreTypes.Action.drawable,
             "2 hours",
             8.5f
         )

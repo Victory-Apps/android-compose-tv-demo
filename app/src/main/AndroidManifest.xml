@@ -23,7 +23,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeTest"
         tools:targetApi="31"
-        android:name="com.victoryapps.composetest.ComposeApplication">
+        android:name="com.victoryapps.composetest.ComposeApplication"
+        android:usesCleartextTraffic="true">
 
         <activity
             android:name=".MainActivity"

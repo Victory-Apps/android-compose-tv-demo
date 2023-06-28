@@ -1,6 +1,6 @@
 package com.victoryapps.composetest
 
-import VideoScreen
+import VideoPlayerScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -46,7 +46,7 @@ private fun App() {
             val navController = rememberNavController()
             NavHost(navController = navController, startDestination = Screens.Home()) {
                 composable(Screens.Home()) {
-                    HomeScreen(Modifier, navController)
+                    HomeScreen(Modifier) { navController.navigate(Screens.Details.withArgs(it.id)) }
                 }
                 composable(
                     route = Screens.Details(),
@@ -55,16 +55,19 @@ private fun App() {
                     })
                 ) { backStackEntry ->
                     val movieId = backStackEntry.arguments?.getInt(DetailsScreenArgs.movieId) ?: 1
-                    DetailsScreen(movieId, Modifier, navController)
+                    DetailsScreen(
+                        movieId,
+                        Modifier
+                    ) { navController.navigate(Screens.VideoPlayer.withArgs(it.id)) }
                 }
                 composable(
-                    route = Screens.Video(),
+                    route = Screens.VideoPlayer(),
                     arguments = listOf(navArgument(DetailsScreenArgs.movieId) {
                         type = NavType.IntType
                     })
                 ) { backStackEntry ->
                     val movieId = backStackEntry.arguments?.getInt(DetailsScreenArgs.movieId) ?: 1
-                    VideoScreen(movieId, Modifier)
+                    VideoPlayerScreen(movieId)
                 }
             }
         }

@@ -84,9 +84,7 @@ dependencies {
     // media
     implementation("androidx.media3:media3-exoplayer:$media3_version")
     implementation("androidx.media3:media3-ui:$media3_version")
-
-    // material icons
-    implementation("androidx.compose.material:material-icons-extended:1.4.3")
+    implementation("androidx.media3:media3-exoplayer-hls:$media3_version")
 
     // hilt
     implementation("com.google.dagger:hilt-android:2.44")

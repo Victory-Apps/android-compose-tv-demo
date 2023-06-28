@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Compose Test</string>
-    <string name="play_movie">Play</string>
+    <string name="play_movie">Play Movie</string>
+    <string name="error">An Error Occured</string>
+    <string name="duration">Run time: %s</string>
+    <string name="rating">Rating: %1$.1f/10</string>
 </resources>

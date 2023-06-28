@@ -1,8 +1,8 @@
 package com.victoryapps.composetest.util
 
 import android.content.Context
-import com.victoryapps.composetest.data.Genre
-import com.victoryapps.composetest.data.MoviesResponse
+import com.victoryapps.composetest.data.model.Genre
+import com.victoryapps.composetest.data.model.MoviesResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.ExperimentalSerializationApi

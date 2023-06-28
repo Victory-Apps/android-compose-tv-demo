@@ -1,4 +1,4 @@
-package com.victoryapps.composetest.ui.home.view
+package com.victoryapps.composetest.ui.home.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
@@ -13,8 +13,8 @@ import androidx.tv.foundation.lazy.list.items
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import com.victoryapps.composetest.data.Genre
-import com.victoryapps.composetest.data.Movie
+import com.victoryapps.composetest.data.model.Genre
+import com.victoryapps.composetest.data.model.Movie
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable

@@ -6,7 +6,7 @@ import com.victoryapps.composetest.ui.details.DetailsScreenArgs
 enum class Screens(val args: List<Any>? = null) {
     Home,
     Details(listOf(DetailsScreenArgs.movieId)),
-    Video(listOf(VideoScreenArgs.movieId));
+    VideoPlayer(listOf(VideoScreenArgs.movieId));
 
     operator fun invoke(): String {
         val argList = StringBuilder()

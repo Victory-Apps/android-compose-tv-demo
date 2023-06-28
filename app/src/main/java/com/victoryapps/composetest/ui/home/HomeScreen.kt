@@ -10,17 +10,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
-import androidx.navigation.NavController
-import androidx.navigation.compose.rememberNavController
 import androidx.tv.foundation.lazy.list.TvLazyColumn
 import androidx.tv.foundation.lazy.list.items
-import com.victoryapps.composetest.Screens
-import com.victoryapps.composetest.ui.home.view.GenreRow
+import com.victoryapps.composetest.data.model.Movie
+import com.victoryapps.composetest.ui.home.components.GenreRow
 
 @Composable
 fun HomeScreen(
     modifier: Modifier,
-    navController: NavController = rememberNavController()
+    onMovieSelected: (Movie) -> Unit
 ) {
     val viewModel: HomeScreenViewModel = hiltViewModel()
 
@@ -31,7 +29,7 @@ fun HomeScreen(
         items(viewModel.uiState.value.genres) { genre ->
             GenreRow(
                 genre,
-                onItemSelected = { navController.navigate(Screens.Details.withArgs(it.id)) },
+                onItemSelected = { onMovieSelected(it) },
                 modifier = Modifier.padding(bottom = 16.dp)
             )
         }
