@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ComposeTest"
         tools:targetApi="31"
-        android:name="com.victoryapps.composetest.ComposeTestApplication">
+        android:name="com.victoryapps.composetest.ComposeApplication">
 
         <activity
             android:name=".MainActivity"

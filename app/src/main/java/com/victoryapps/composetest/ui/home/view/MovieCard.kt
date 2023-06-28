@@ -11,9 +11,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -21,9 +24,9 @@ import androidx.tv.material3.Card
 import androidx.tv.material3.ExperimentalTvMaterial3Api
 import androidx.tv.material3.MaterialTheme
 import androidx.tv.material3.Text
-import coil.compose.rememberAsyncImagePainter
-import com.victoryapps.composetest.R
+import com.victoryapps.composetest.data.GenreEnum
 import com.victoryapps.composetest.data.Movie
+import com.victoryapps.composetest.extension.getDrawableIdByName
 
 @OptIn(ExperimentalTvMaterial3Api::class)
 @Composable
@@ -39,11 +42,13 @@ fun MovieCard(
         onClick = onClick
     ) {
         Box(Modifier.fillMaxSize()) {
-            val painter = rememberAsyncImagePainter(R.raw.comedy_thumbnail)
+            val drawableId = LocalContext.current.getDrawableIdByName(movie.thumbnail)
             Image(
-                painter = painter,
+                painter = painterResource(drawableId),
                 contentDescription = movie.title,
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .blur(8.dp),
                 contentScale = ContentScale.Crop
             )
 
@@ -55,7 +60,7 @@ fun MovieCard(
                     .align(Alignment.BottomCenter)
                     .background(brush)
                     .padding(4.dp),
-                style = MaterialTheme.typography.bodyMedium
+                style = MaterialTheme.typography.titleSmall
             )
         }
     }
@@ -64,5 +69,16 @@ fun MovieCard(
 @Preview(showBackground = true, device = Devices.TV_1080p)
 @Composable
 fun MovieCardPreview() {
-    MovieCard(Movie(1, "Movie Title", "Movie description", null, null, "2 hours", 8.5f))
+    MovieCard(
+        Movie(
+            1,
+            "Movie Title",
+            "Movie description",
+            Movie.Companion.url,
+
+            GenreEnum.Action.drawable,
+            "2 hours",
+            8.5f
+        )
+    )
 }

@@ -1,13 +1,26 @@
 package com.victoryapps.composetest
 
+import VideoScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Devices.TV_1080p
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import androidx.tv.material3.ExperimentalTvMaterial3Api
+import androidx.tv.material3.MaterialTheme
+import com.victoryapps.composetest.theme.ComposeTestTheme
+import com.victoryapps.composetest.ui.details.DetailsScreen
+import com.victoryapps.composetest.ui.details.DetailsScreenArgs
 import com.victoryapps.composetest.ui.home.HomeScreen
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -16,7 +29,44 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            HomeScreen(Modifier, viewModel())
+            App()
+        }
+    }
+}
+
+@OptIn(ExperimentalTvMaterial3Api::class)
+@Composable
+private fun App() {
+    ComposeTestTheme {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(MaterialTheme.colorScheme.surface)
+        ) {
+            val navController = rememberNavController()
+            NavHost(navController = navController, startDestination = Screens.Home()) {
+                composable(Screens.Home()) {
+                    HomeScreen(Modifier, navController)
+                }
+                composable(
+                    route = Screens.Details(),
+                    arguments = listOf(navArgument(DetailsScreenArgs.movieId) {
+                        type = NavType.IntType
+                    })
+                ) { backStackEntry ->
+                    val movieId = backStackEntry.arguments?.getInt(DetailsScreenArgs.movieId) ?: 1
+                    DetailsScreen(movieId, Modifier, navController)
+                }
+                composable(
+                    route = Screens.Video(),
+                    arguments = listOf(navArgument(DetailsScreenArgs.movieId) {
+                        type = NavType.IntType
+                    })
+                ) { backStackEntry ->
+                    val movieId = backStackEntry.arguments?.getInt(DetailsScreenArgs.movieId) ?: 1
+                    VideoScreen(movieId, Modifier)
+                }
+            }
         }
     }
 }
@@ -24,5 +74,5 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true, device = TV_1080p)
 @Composable
 fun AppPreview() {
-    HomeScreen(Modifier, viewModel())
+    App()
 }
