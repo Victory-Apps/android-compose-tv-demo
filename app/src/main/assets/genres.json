@@ -1,0 +1,308 @@
+{
+  "genres": [
+    {
+      "id": 1,
+      "title": "Action",
+      "movies": [
+        {
+          "id": 1,
+          "title": "Code Red",
+          "description": "A skilled ex-operative, Max Daniels, is forced out of retirement when a dangerous terrorist organization threatens to unleash a deadly virus on a major city. With time ticking, Max must assemble a team of unlikely allies to stop the impending catastrophe and bring the terrorists to justice.",
+          "rating": 7.8,
+          "duration": "2 hours 15 minutes"
+        },
+        {
+          "id": 2,
+          "title": "Shadowstrike",
+          "description": "In a world where mercenaries have extraordinary abilities, a rogue agent with the power to control shadows is hired to rescue a kidnapped scientist who holds the key to a revolutionary energy source. As he infiltrates a heavily guarded facility, he must confront his own demons and outwit a ruthless organization to complete the mission.",
+          "rating": 8.2,
+          "duration": "2 hours 10 minutes"
+        },
+        {
+          "id": 3,
+          "title": "Rogue Protocol",
+          "description": "When a top-secret military project goes haywire, a fearless soldier finds himself hunted by a team of highly trained assassins and the government he once served. With his back against the wall, he must uncover the truth behind the conspiracy and expose those responsible before they silence him forever.",
+          "rating": 7.6,
+          "duration": "1 hour 55 minutes"
+        },
+        {
+          "id": 4,
+          "title": "Final Showdown",
+          "description": "Two rival martial arts champions, each with their own fighting style, are forced to team up when a powerful crime lord kidnaps their loved ones. In a thrilling race against time, they must put aside their differences and unleash their skills in an ultimate battle to save their families and bring the criminal mastermind to justice.",
+          "rating": 8.0,
+          "duration": "2 hours 5 minutes"
+        },
+        {
+          "id": 5,
+          "title": "Zero Hour",
+          "description": "A former intelligence analyst turned fugitive discovers a sinister plot to initiate a global cyber-attack that could cripple nations. With the clock ticking, he must navigate a web of deception and betrayal while evading relentless assassins and uncovering the truth before time runs out.",
+          "rating": 7.9,
+          "duration": "2 hours 20 minutes"
+        },
+        {
+          "id": 6,
+          "title": "The Guardian's Gambit",
+          "description": "A team of highly skilled mercenaries is hired to retrieve a stolen artifact from a heavily fortified fortress. As they face insurmountable odds and unexpected betrayals, they must outsmart their enemies and complete the mission against all odds.",
+          "rating": 7.5,
+          "duration": "2 hours 5 minutes"
+        },
+        {
+          "id": 7,
+          "title": "Deadly Alliance",
+          "description": "Two rival spies, once partners, are reluctantly paired up to stop an international arms dealer from selling a dangerous weapon to the highest bidder. Battling their own personal differences, they must put their skills to the test and save the world from impending destruction.",
+          "rating": 7.7,
+          "duration": "2 hours 15 minutes"
+        },
+        {
+          "id": 8,
+          "title": "Chaos Theory",
+          "description": "A brilliant hacker with a troubled past is recruited by a clandestine organization to uncover a vast conspiracy that threatens to destabilize the world order. As he races against time, he must navigate through a maze of deception and danger, unraveling the truth before it's too late.",
+          "rating": 8.1,
+          "duration": "2 hours 25 minutes"
+        },
+        {
+          "id": 9,
+          "title": "Edge of Oblivion",
+          "description": "In a post-apocalyptic wasteland, a lone warrior embarks on a treacherous journey to find a mythical safe haven known as 'The Oasis.' Along the way, he must confront savage gangs, mutated creatures, and his own inner demons in a battle for survival and redemption.",
+          "rating": 7.4,
+          "duration": "2 hours 30 minutes"
+        },
+        {
+          "id": 10,
+          "title": "Final Redemption",
+          "description": "A former hitman, haunted by his past, seeks redemption by protecting a young girl from a dangerous crime syndicate. As he confronts his former employers and their ruthless assassins, he must tap into his lethal skills to ensure her survival and find his own salvation.",
+          "rating": 7.8,
+          "duration": "2 hours 10 minutes"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Comedy",
+      "movies": [
+        {
+          "id": 11,
+          "title": "Laugh Out Loud",
+          "description": "A group of friends embark on a hilarious road trip to attend a comedy festival. Along the way, they encounter outrageous characters, mishaps, and unexpected adventures that test their friendships and provide endless laughter.",
+          "rating": 7.8,
+          "duration": "1 hour 45 minutes"
+        },
+        {
+          "id": 12,
+          "title": "The Funny Bone",
+          "description": "A struggling stand-up comedian, desperate for success, gets a lucky break when he is invited to perform at a prestigious comedy club. As he navigates the cutthroat world of comedy, he learns valuable lessons about life, love, and finding his unique voice.",
+          "rating": 8.2,
+          "duration": "2 hours"
+        },
+        {
+          "id": 13,
+          "title": "Hilarious Hijinks",
+          "description": "A bumbling but well-meaning individual finds himself in a series of comical misadventures after mistakenly being identified as a secret agent. As he tries to clear his name, he unwittingly becomes entangled in a dangerous plot while leaving a trail of comedic chaos behind.",
+          "rating": 7.6,
+          "duration": "1 hour 55 minutes"
+        },
+        {
+          "id": 14,
+          "title": "Funny Business",
+          "description": "A group of misfit employees at a failing company decide to turn their workplace into a comedy club to boost morale and save their jobs. Hilarity ensues as they navigate through disastrous performances, quirky customers, and unexpected success.",
+          "rating": 8.0,
+          "duration": "1 hour 50 minutes"
+        },
+        {
+          "id": 15,
+          "title": "Side-Splitting Shenanigans",
+          "description": "Two estranged siblings are forced to work together to save their family's comedy club from foreclosure. As they put aside their differences and rally the local community, they rediscover the power of laughter and the importance of family.",
+          "rating": 7.9,
+          "duration": "2 hours 5 minutes"
+        },
+        {
+          "id": 16,
+          "title": "The Comedic Con",
+          "description": "A master con artist with a knack for impersonations hatches a wild plan to pull off the ultimate comedy heist. With a team of quirky accomplices, they infiltrate a high-security event, relying on their wit, humor, and impeccable timing to outsmart the authorities.",
+          "rating": 7.5,
+          "duration": "1 hour 55 minutes"
+        },
+        {
+          "id": 17,
+          "title": "Funny Family Feud",
+          "description": "Two neighboring families, known for their hilarious and ongoing pranks, find themselves in an epic prank war when a long-standing feud is reignited. As the pranks escalate, tensions rise, and the neighborhood becomes a battleground of outrageous comedy.",
+          "rating": 7.7,
+          "duration": "2 hours 10 minutes"
+        },
+        {
+          "id": 18,
+          "title": "The Joke's on Us",
+          "description": "A struggling comedian gets the chance of a lifetime when he is invited to perform on a popular late-night talk show. With fame and fortune within reach, he must navigate the cutthroat world of showbiz while staying true to his comedic roots.",
+          "rating": 8.1,
+          "duration": "1 hour 50 minutes"
+        },
+        {
+          "id": 19,
+          "title": "Comedy Club Chaos",
+          "description": "A rookie comedian, determined to make it big, lands a job at a renowned comedy club known for its tough audiences. Through a series of hilarious and awkward performances, he learns the art of comedy, builds confidence, and discovers his unique comedic style.",
+          "rating": 7.6,
+          "duration": "2 hours"
+        },
+        {
+          "id": 20,
+          "title": "Funny Fiasco",
+          "description": "A well-meaning but accident-prone individual gets involved in a series of comedic mishaps while attempting to organize a major charity event. As chaos ensues, he must find a way to save the day and turn the disastrous situation into a heartwarming success.",
+          "rating": 7.8,
+          "duration": "1 hour 55 minutes"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Drama",
+      "movies": [
+        {
+          "id": 21,
+          "title": "The Pursuit of Dreams",
+          "description": "A talented young musician faces numerous obstacles as he chases his dreams of becoming a world-renowned artist. Through perseverance, sacrifice, and the support of his loved ones, he discovers the true meaning of success and finds his own voice.",
+          "rating": 8.2,
+          "duration": "2 hours 15 minutes"
+        },
+        {
+          "id": 22,
+          "title": "Fading Memories",
+          "description": "An aging professor with Alzheimer's disease embarks on a poignant journey to preserve his fading memories. As he revisits significant moments from his past, he unravels the complexities of his life and learns to cherish the present.",
+          "rating": 7.9,
+          "duration": "2 hours 10 minutes"
+        },
+        {
+          "id": 23,
+          "title": "Whispered Secrets",
+          "description": "A young journalist uncovers a hidden conspiracy that threatens to expose long-buried secrets. As she delves deeper into the investigation, she becomes entangled in a web of deceit, betrayal, and danger that challenges her integrity and tests her resolve.",
+          "rating": 8.1,
+          "duration": "2 hours 5 minutes"
+        },
+        {
+          "id": 24,
+          "title": "Broken Promises",
+          "description": "A couple's relationship is put to the test when they face unforeseen challenges and heartbreaking revelations. As they confront their past mistakes and shattered dreams, they must decide whether their love is strong enough to rebuild what was broken.",
+          "rating": 7.7,
+          "duration": "2 hours 20 minutes"
+        },
+        {
+          "id": 25,
+          "title": "The Silent Witness",
+          "description": "A young lawyer takes on a high-profile murder case and finds herself immersed in a world of lies, corruption, and cover-ups. As she uncovers the truth, she risks everything to ensure justice is served and fights for the voiceless victims.",
+          "rating": 8.0,
+          "duration": "2 hours 25 minutes"
+        },
+        {
+          "id": 26,
+          "title": "Unspoken Emotions",
+          "description": "A deeply introverted artist struggles to express her emotions and connect with others. Through her art, she explores the complexities of human relationships, unearths hidden truths, and discovers the transformative power of vulnerability and self-expression.",
+          "rating": 8.3,
+          "duration": "2 hours 10 minutes"
+        },
+        {
+          "id": 27,
+          "title": "Beyond the Horizon",
+          "description": "A group of friends embark on a cross-country road trip to fulfill a lifelong dream and discover the true meaning of friendship. Along the way, they confront personal demons, face unexpected challenges, and find solace in the beauty of the open road.",
+          "rating": 7.9,
+          "duration": "2 hours 15 minutes"
+        },
+        {
+          "id": 28,
+          "title": "Fragile Hearts",
+          "description": "Two individuals with broken hearts find solace in each other as they navigate the complexities of love, loss, and healing. Through their shared experiences, they learn that sometimes the greatest strength comes from embracing vulnerability and opening up to new possibilities.",
+          "rating": 8.2,
+          "duration": "2 hours 5 minutes"
+        },
+        {
+          "id": 29,
+          "title": "The Forgotten Promise",
+          "description": "A family's bond is tested when a long-forgotten secret resurfaces, threatening to tear them apart. As they confront their past mistakes and confront the painful truth, they must find forgiveness, redemption, and the courage to rebuild what was lost.",
+          "rating": 7.8,
+          "duration": "2 hours 20 minutes"
+        },
+        {
+          "id": 30,
+          "title": "Echoes of Yesterday",
+          "description": "A man haunted by the ghosts of his past embarks on a journey of self-discovery and redemption. Through a series of encounters and introspection, he confronts his regrets, seeks forgiveness, and learns to embrace the present to shape a better future.",
+          "rating": 8.1,
+          "duration": "2 hours 25 minutes"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Science Fiction",
+      "movies": [
+        {
+          "id": 31,
+          "title": "Eternal Solitude",
+          "description": "In a dystopian future where human emotions have been eradicated, a group of rebels seeks to restore the lost connection to humanity. As they navigate a dangerous world governed by artificial intelligence, they rediscover the power of love, hope, and the resilience of the human spirit.",
+          "rating": 8.2,
+          "duration": "2 hours 15 minutes"
+        },
+        {
+          "id": 32,
+          "title": "Parallel Realities",
+          "description": "A brilliant physicist invents a groundbreaking device that allows access to parallel dimensions. However, as he explores alternate realities, he discovers the consequences of tampering with the fabric of existence and must find a way to set things right before irreversible chaos ensues.",
+          "rating": 7.9,
+          "duration": "2 hours 10 minutes"
+        },
+        {
+          "id": 33,
+          "title": "The Singularity Code",
+          "description": "In a future where artificial intelligence has surpassed human capabilities, a young prodigy stumbles upon a hidden code that could change the course of humanity. With the fate of the world at stake, she must outsmart powerful forces and challenge the boundaries of technology to save mankind.",
+          "rating": 8.1,
+          "duration": "2 hours 5 minutes"
+        },
+        {
+          "id": 34,
+          "title": "Chronicles of the Cosmos",
+          "description": "A group of astronauts embarks on a perilous journey to explore distant galaxies and unlock the secrets of the universe. As they encounter unknown civilizations, face cosmic threats, and grapple with the mysteries of existence, they discover the fragility of humanity and the vastness of the cosmos.",
+          "rating": 7.7,
+          "duration": "2 hours 20 minutes"
+        },
+        {
+          "id": 35,
+          "title": "Dreams of Tomorrow",
+          "description": "In a post-apocalyptic world ravaged by environmental disaster, a visionary scientist works tirelessly to find a way to reverse the damage and restore hope to humanity. With limited resources and against all odds, he races against time to create a future where survival and redemption are possible.",
+          "rating": 8.0,
+          "duration": "2 hours 25 minutes"
+        },
+        {
+          "id": 36,
+          "title": "The Last Refuge",
+          "description": "In a world on the brink of extinction, a small group of survivors seeks refuge in a hidden sanctuary. As they confront internal conflicts and external threats, they must find the strength to overcome their differences and fight for the survival of their species.",
+          "rating": 8.3,
+          "duration": "2 hours 10 minutes"
+        },
+        {
+          "id": 37,
+          "title": "Temporal Paradox",
+          "description": "A brilliant physicist discovers the ability to travel through time and alters the course of history. As he grapples with the consequences of his actions, he must unravel the complex web of paradoxes, restore the timeline, and ensure a future free from the perils of temporal manipulation.",
+          "rating": 7.9,
+          "duration": "2 hours 15 minutes"
+        },
+        {
+          "id": 38,
+          "title": "Beyond Reality",
+          "description": "A renowned scientist develops a groundbreaking virtual reality system that blurs the line between the real world and the digital realm. As users become addicted to the immersive experience, they must confront the ethical implications and discover the true nature of their existence.",
+          "rating": 8.2,
+          "duration": "2 hours 5 minutes"
+        },
+        {
+          "id": 39,
+          "title": "The Quantum Nexus",
+          "description": "A team of scientists embarks on a dangerous mission to harness the power of quantum technology. As they delve into the mysterious realm of quantum mechanics, they must confront their own fears and push the boundaries of science to unlock a new era of possibilities.",
+          "rating": 8.1,
+          "duration": "2 hours 20 minutes"
+        },
+        {
+          "id": 40,
+          "title": "The Final Frontier",
+          "description": "In a race against time, a group of explorers ventures into the uncharted depths of space to find a new home for humanity. As they encounter cosmic phenomena and face the limits of human endurance, they must confront their own mortality and the ultimate question of our place in the universe.",
+          "rating": 8.3,
+          "duration": "2 hours 25 minutes"
+        }
+      ]
+    }
+  ]
+}

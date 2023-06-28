@@ -1,4 +1,4 @@
-package com.victoryapps.composetest.ui.theme
+package com.victoryapps.composetest.theme
 
 import androidx.compose.ui.graphics.Color
 

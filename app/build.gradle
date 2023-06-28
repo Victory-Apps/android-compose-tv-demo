@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
+    id 'org.jetbrains.kotlin.plugin.serialization'
 }
 
 android {
@@ -44,6 +47,10 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -53,9 +60,12 @@ dependencies {
     def media3_version = "1.1.0-rc01"
 
     implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
+    //kotlin serialization
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0'
 
     implementation 'androidx.core:core-ktx:1.10.1'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1'
     implementation 'androidx.activity:activity-compose:1.7.2'
 
     // compose ui
@@ -78,8 +88,9 @@ dependencies {
     // material icons
     implementation("androidx.compose.material:material-icons-extended:1.4.3")
 
-    //glide
-    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    // hilt
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
 
     // testing
     testImplementation 'junit:junit:4.13.2'
@@ -89,4 +100,8 @@ dependencies {
     androidTestImplementation 'androidx.compose.ui:ui-test-junit4'
     debugImplementation 'androidx.compose.ui:ui-tooling'
     debugImplementation 'androidx.compose.ui:ui-test-manifest'
+}
+
+kapt {
+    correctErrorTypes = true
 }

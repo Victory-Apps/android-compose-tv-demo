@@ -24,4 +24,5 @@
     <color name="errorContainer">#93000A</color>
     <color name="onErrorContainer">#FFB4AB</color>
     <color name="border">#8E9099</color>
+    <color name="transparent">#00000000</color>
 </resources>

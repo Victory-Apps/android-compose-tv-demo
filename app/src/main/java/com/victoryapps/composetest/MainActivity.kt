@@ -3,48 +3,26 @@ package com.victoryapps.composetest
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.tv.material3.ExperimentalTvMaterial3Api
-import androidx.tv.material3.MaterialTheme
-import com.victoryapps.composetest.ui.theme.ComposeTestTheme
+import androidx.compose.ui.tooling.preview.Devices.TV_1080p
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.victoryapps.composetest.ui.home.HomeScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            App()
+            HomeScreen(Modifier, viewModel())
         }
     }
 }
 
-@OptIn(ExperimentalTvMaterial3Api::class)
+@Preview(showBackground = true, device = TV_1080p)
 @Composable
-fun MainActivity.App() {
-    ComposeTestTheme {
-        Box(modifier = Modifier
-            .fillMaxSize()
-            .background(MaterialTheme.colorScheme.surface)) {
-
-        }
-    }
+fun AppPreview() {
+    HomeScreen(Modifier, viewModel())
 }
-
-//@Composable
-//fun Greeting(name: String, modifier: Modifier = Modifier) {
-//    Text(
-//        text = "Hello $name!",
-//        modifier = modifier
-//    )
-//}
-//
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    ComposeTestTheme {
-//        Greeting("Android")
-//    }
-//}

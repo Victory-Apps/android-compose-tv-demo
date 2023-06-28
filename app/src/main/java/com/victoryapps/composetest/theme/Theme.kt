@@ -1,4 +1,4 @@
-package com.victoryapps.composetest.ui.theme
+package com.victoryapps.composetest.theme
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.colorResource
@@ -32,7 +32,7 @@ private val DarkColorScheme @Composable get() = darkColorScheme(
     onError = colorResource(R.color.onError),
     errorContainer = colorResource(R.color.errorContainer),
     onErrorContainer = colorResource(R.color.onErrorContainer),
-    border = colorResource(R.color.border),
+    border = colorResource(R.color.border)
 )
 
 @OptIn(ExperimentalTvMaterial3Api::class)
