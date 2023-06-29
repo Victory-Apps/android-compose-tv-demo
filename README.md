@@ -1,6 +1,6 @@
 # android-compose-tv-demo
 
-An example Android TV app using Compose UI
+An example Android TV app using Jetpack Compose 
 
 
 ### Home Screen

@@ -33,29 +33,30 @@ object VideoScreenArgs {
 @Composable
 fun VideoPlayerScreen(
     movieId: Int,
+    viewModel: DetailsScreenViewModel = hiltViewModel()
 ) {
-    val viewModel: DetailsScreenViewModel = hiltViewModel()
-    viewModel.retrieveMovie(movieId)
+
     val context = LocalContext.current
 
     val exoPlayer = remember {
         ExoPlayer.Builder(context)
             .build()
-            .apply {
-                val dataSourceFactory = DefaultHttpDataSource.Factory()
-                val hlsMediaSource =
-                    HlsMediaSource.Factory(dataSourceFactory).createMediaSource(
-                        MediaItem.Builder().setUri(
-                            Uri.parse(viewModel.uiState.value.movie?.media ?: Movie.url)
-                        ).build()
-                    )
-                setMediaSource(hlsMediaSource)
-                prepare()
-            }
     }
 
     LaunchedEffect(Unit) {
+        viewModel.retrieveMovie(movieId)
+        val movie = viewModel.uiState.value.movie?.media.orEmpty()
         with(exoPlayer) {
+            val dataSourceFactory = DefaultHttpDataSource.Factory()
+            val hlsMediaSource =
+                HlsMediaSource.Factory(dataSourceFactory).createMediaSource(
+                    MediaItem.Builder().setUri(
+                        Uri.parse(movie)
+                    ).build()
+                )
+            setMediaSource(hlsMediaSource)
+            prepare()
+
             playWhenReady = true
             videoScalingMode = C.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING
             repeatMode = Player.REPEAT_MODE_ONE

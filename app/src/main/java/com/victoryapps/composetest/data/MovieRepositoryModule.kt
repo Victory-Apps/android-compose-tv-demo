@@ -7,6 +7,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import javax.inject.Singleton
 
 @Module
@@ -15,10 +17,17 @@ object MovieRepositoryModule {
 
     @Provides
     @Singleton
+    fun providesIODispatcher(): CoroutineDispatcher = Dispatchers.IO
+
+    @Provides
+    @Singleton
     fun providesGenreJsonParser(@ApplicationContext context: Context) = GenreJsonParser(context)
 
     @Provides
     @Singleton
-    fun providesVideoRepository(genreJsonParser: GenreJsonParser): MovieRepository =
-        MovieRepositoryImpl(genreJsonParser)
+    fun providesMovieRepository(
+        dispatcher: CoroutineDispatcher,
+        genreJsonParser: GenreJsonParser
+    ): MovieRepository =
+        MovieRepositoryImpl(dispatcher, genreJsonParser)
 }

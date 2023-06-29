@@ -46,7 +46,9 @@ private fun App() {
             val navController = rememberNavController()
             NavHost(navController = navController, startDestination = Screens.Home()) {
                 composable(Screens.Home()) {
-                    HomeScreen(Modifier) { navController.navigate(Screens.Details.withArgs(it.id)) }
+                    HomeScreen(
+                        Modifier,
+                        { navController.navigate(Screens.Details.withArgs(it.id)) })
                 }
                 composable(
                     route = Screens.Details(),
@@ -57,8 +59,8 @@ private fun App() {
                     val movieId = backStackEntry.arguments?.getInt(DetailsScreenArgs.movieId) ?: 1
                     DetailsScreen(
                         movieId,
-                        Modifier
-                    ) { navController.navigate(Screens.VideoPlayer.withArgs(it.id)) }
+                        Modifier,
+                        { navController.navigate(Screens.VideoPlayer.withArgs(it.id)) })
                 }
                 composable(
                     route = Screens.VideoPlayer(),

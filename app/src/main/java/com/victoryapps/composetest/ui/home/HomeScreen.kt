@@ -18,10 +18,9 @@ import com.victoryapps.composetest.ui.home.components.GenreRow
 @Composable
 fun HomeScreen(
     modifier: Modifier,
-    onMovieSelected: (Movie) -> Unit
+    onMovieSelected: (Movie) -> Unit,
+    viewModel: HomeScreenViewModel = hiltViewModel()
 ) {
-    val viewModel: HomeScreenViewModel = hiltViewModel()
-
     TvLazyColumn(
         modifier = modifier.fillMaxSize(),
         verticalArrangement = Arrangement.spacedBy(24.dp),
@@ -40,5 +39,5 @@ fun HomeScreen(
 @Preview(showBackground = true, device = Devices.TV_1080p)
 @Composable
 fun HomeScreenPreview() {
-    HomeScreen(Modifier, viewModel())
+    HomeScreen(Modifier, {})
 }
