@@ -17,7 +17,7 @@ import com.victoryapps.composetest.ui.home.components.GenreRow
 
 @Composable
 fun HomeScreen(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     onMovieSelected: (Movie) -> Unit,
     viewModel: HomeScreenViewModel = hiltViewModel()
 ) {

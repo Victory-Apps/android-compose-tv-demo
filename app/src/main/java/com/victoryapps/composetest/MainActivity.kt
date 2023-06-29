@@ -4,6 +4,8 @@ import VideoPlayerScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -45,28 +47,39 @@ private fun App() {
         ) {
             val navController = rememberNavController()
             NavHost(navController = navController, startDestination = Screens.Home()) {
-                composable(Screens.Home()) {
-                    HomeScreen(
-                        Modifier,
-                        { navController.navigate(Screens.Details.withArgs(it.id)) })
+                composable(
+                    route = Screens.Home(),
+                    enterTransition = { fadeIn() },
+                    exitTransition = { fadeOut() }
+                ) {
+                    HomeScreen(onMovieSelected = {
+                        navController.navigate(
+                            Screens.Details.withArgs(
+                                it.id
+                            )
+                        )
+                    })
                 }
                 composable(
                     route = Screens.Details(),
                     arguments = listOf(navArgument(DetailsScreenArgs.movieId) {
                         type = NavType.IntType
-                    })
+                    }),
+                    enterTransition = { fadeIn() },
+                    exitTransition = { fadeOut() }
                 ) { backStackEntry ->
                     val movieId = backStackEntry.arguments?.getInt(DetailsScreenArgs.movieId) ?: 1
                     DetailsScreen(
-                        movieId,
-                        Modifier,
-                        { navController.navigate(Screens.VideoPlayer.withArgs(it.id)) })
+                        movieId = movieId,
+                        onMovieSelected = { navController.navigate(Screens.VideoPlayer.withArgs(it.id)) })
                 }
                 composable(
                     route = Screens.VideoPlayer(),
                     arguments = listOf(navArgument(DetailsScreenArgs.movieId) {
                         type = NavType.IntType
-                    })
+                    }),
+                    enterTransition = { fadeIn() },
+                    exitTransition = { fadeOut() }
                 ) { backStackEntry ->
                     val movieId = backStackEntry.arguments?.getInt(DetailsScreenArgs.movieId) ?: 1
                     VideoPlayerScreen(movieId)
